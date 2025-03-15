@@ -1,0 +1,1 @@
+dotnet ef database update %1 -p .\IdentityServer.DAL\ --startup-project .\IdentityServer\

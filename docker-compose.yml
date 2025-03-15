@@ -1,0 +1,15 @@
+version: "1"
+name: 'identity-server'
+
+services:
+  database:
+    container_name: database-mysql
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./docker-volumes/mysql_storage/users:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=LDDB_Identity
+      - MYSQL_ROOT_PASSWORD=admin_password_123
